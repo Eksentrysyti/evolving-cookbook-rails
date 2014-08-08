@@ -3,7 +3,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
 # Conventionally, all specs live under a `spec` directory, which RSpec adds to the `$LOAD_PATH`.
 # The generated `.rspec` file contains `--require spec_helper` which will cause this
 # file to always be loaded, without a need to explicitly require it in any files.
@@ -20,6 +19,9 @@ require 'rspec/autorun'
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+
+  config.include Rails.application.routes.url_helpers
+  config.include Capybara::DSL
 
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
 
