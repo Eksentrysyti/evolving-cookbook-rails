@@ -1,5 +1,8 @@
 class MainController < ApplicationController
 
-  def index
+  def landing
+  end
+
+  def recipe_finder
   end
 end

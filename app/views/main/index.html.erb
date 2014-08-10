@@ -1,1 +1,19 @@
-<h1>Evolving Cookbook</h1>
+<div class="container signin-form col-sm-4 col-sm-offset-1">
+  Sign In:
+  <form action="/login" method="post">
+  <input type="text" class="form-control" name="username" placeholder="Username">
+  <input type="password" class="form-control" name="password" placeholder="Password">
+  <input type="submit" value="Sign In">
+  </form>
+</div>
+
+<div class="container signup-form col-sm-4 col-sm-offset-2">
+  Sign Up:
+  <form action="/users" method="post">
+  <input type="text" class="form-control" name="username" placeholder="Username">
+  <input type="email" class="form-control" name="email" placeholder="Email">
+  <input type="password" class="form-control" name="password" placeholder="Password">
+  <input type="password" class="form-control" name="password2" placeholder="Repeat Password">
+  <input type="submit" value="Sign Up">
+  </form>
+</div>

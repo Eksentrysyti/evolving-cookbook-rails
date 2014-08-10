@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
 
   root 'main#index'
+  resources :users, only: [:create]
+
+  post '/login' => 'users#login'
+  post '/logout' => 'users#logout'
+  get '/recipe_finder' => 'main#recipe_finder'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
